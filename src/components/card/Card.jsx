@@ -95,7 +95,7 @@ const Card = ({item, props, who}) => {
             <p className={style.title}>{item.title}</p>
             {/* <p className={style.description}>{item.description}</p> */}
             <p className={style.price}>${item.price}</p>
-            {props != "del" ? <p className={style.count}>Number : {item.count}</p> : ""}
+            {props == "basket" ? <p className={style.count}>Number : {item.count}</p> : ""}
 
         </div>
 
