@@ -5,7 +5,7 @@ import Home from "../components/home/Home";
 import Wishlist from "../components/wishlist/Wishlist";
 import NotFound from "../components/notfound/NotFound";
 
-export const router = createBrowserRouter([
+export const routers = createBrowserRouter([
     {
         path: "/",
         Component: Layout,

@@ -1,7 +1,23 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import style from './Home.module.scss'
+import axios from 'axios'
+import Card from '../card/Card'
 
 const Home = () => {
+  
+  const [data, setData] = useState([])
+
+  const getData = () => {
+
+    axios.get("https://fakestoreapi.com/products").then((res) => setData(res.data))
+
+  }
+
+  useEffect(() => {
+    getData()
+  }, [])
+
+
   return (
     <div className={style.main}>
     
